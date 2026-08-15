@@ -3,26 +3,379 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .box {
-            width: 200px;
-            height: 200px;
-            background-color: lightblue;
-            border: 2px solid rgb(255, 0, 0);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        li:hover{
-            background-color: lightblue;
-        }
-    </style>
+
+    <title>Nature Explorer</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Box</h1>
-    <div class="box">
-        <p>Hello, World!</p>
-    </div>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🌿 Nature Explorer
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#maps">Maps</a>
+            </li>
+
+            <li>
+                <a href="#settings">Settings</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ================= HOME ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <p class="welcome">
+                EXPLORE • DISCOVER • CONNECT
+            </p>
+
+            <h1>
+                Discover the Beauty of Nature
+            </h1>
+
+            <p class="description">
+                Explore peaceful places, discover beautiful landscapes,
+                and connect with the natural world around you.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="main-button" onclick="exploreNature()">
+                    Explore Now
+                </button>
+
+                <button class="outline-button" onclick="showMessage()">
+                    Learn More
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="scroll-down">
+            ↓
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about">
+
+        <div class="about-content">
+
+            <p class="section-label">
+                WELCOME TO NATURE
+            </p>
+
+            <h2>
+                A Place to Explore and Discover
+            </h2>
+
+            <p>
+                Nature gives us peace, inspiration and a beautiful
+                environment to explore. Our platform helps you discover
+                amazing natural places and plan your journey.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MAPS ================= -->
+
+    <section id="maps" class="section maps-section">
+
+        <p class="section-label">
+            EXPLORE THE WORLD
+        </p>
+
+        <h2>
+            Explore Maps
+        </h2>
+
+        <p class="section-description">
+            Find beautiful natural locations and explore places
+            surrounded by forests, mountains, rivers and lakes.
+        </p>
+
+
+        <div class="card-container">
+
+            <!-- Forest -->
+
+            <div class="nature-card">
+
+                <div class="card-icon">
+                    🌲
+                </div>
+
+                <h3>
+                    Forests
+                </h3>
+
+                <p>
+                    Discover peaceful forests and enjoy the beauty
+                    of green landscapes.
+                </p>
+
+                <button onclick="selectPlace('Forests')">
+                    Explore
+                </button>
+
+            </div>
+
+
+            <!-- Mountains -->
+
+            <div class="nature-card">
+
+                <div class="card-icon">
+                    🏔️
+                </div>
+
+                <h3>
+                    Mountains
+                </h3>
+
+                <p>
+                    Explore breathtaking mountain landscapes and
+                    beautiful viewpoints.
+                </p>
+
+                <button onclick="selectPlace('Mountains')">
+                    Explore
+                </button>
+
+            </div>
+
+
+            <!-- Lakes -->
+
+            <div class="nature-card">
+
+                <div class="card-icon">
+                    🌊
+                </div>
+
+                <h3>
+                    Lakes
+                </h3>
+
+                <p>
+                    Find calm and beautiful lakes surrounded
+                    by natural scenery.
+                </p>
+
+                <button onclick="selectPlace('Lakes')">
+                    Explore
+                </button>
+
+            </div>
+
+
+            <!-- Waterfalls -->
+
+            <div class="nature-card">
+
+                <div class="card-icon">
+                    💧
+                </div>
+
+                <h3>
+                    Waterfalls
+                </h3>
+
+                <p>
+                    Discover refreshing waterfalls and peaceful
+                    natural destinations.
+                </p>
+
+                <button onclick="selectPlace('Waterfalls')">
+                    Explore
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= QUOTE ================= -->
+
+    <section class="quote-section">
+
+        <div class="quote-content">
+
+            <span>
+                ❝
+            </span>
+
+            <h2>
+                Nature is not a place to visit.
+                It is home.
+            </h2>
+
+            <p>
+                Take a moment, breathe deeply and enjoy the world around you.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SETTINGS ================= -->
+
+    <section id="settings" class="section settings-section">
+
+        <p class="section-label">
+            PERSONALIZE
+        </p>
+
+        <h2>
+            Settings
+        </h2>
+
+        <p class="section-description">
+            Customize your experience according to your preference.
+        </p>
+
+
+        <div class="settings-box">
+
+            <div class="setting-item">
+
+                <div>
+                    <h3>
+                        🌙 Dark Mode
+                    </h3>
+
+                    <p>
+                        Switch between light and dark appearance.
+                    </p>
+                </div>
+
+                <label class="switch">
+
+                    <input
+                        type="checkbox"
+                        id="darkMode"
+                        onchange="toggleDarkMode()"
+                    >
+
+                    <span class="slider"></span>
+
+                </label>
+
+            </div>
+
+
+            <div class="setting-item">
+
+                <div>
+                    <h3>
+                        🔔 Notifications
+                    </h3>
+
+                    <p>
+                        Receive updates about new locations.
+                    </p>
+                </div>
+
+                <label class="switch">
+
+                    <input
+                        type="checkbox"
+                        id="notifications"
+                        onchange="toggleNotifications()"
+                    >
+
+                    <span class="slider"></span>
+
+                </label>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="footer-logo">
+                🌿 Nature Explorer
+            </div>
+
+            <p>
+                Explore More • Travel Better • Connect With Nature
+            </p>
+
+            <div class="footer-links">
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#maps">
+                    Maps
+                </a>
+
+                <a href="#settings">
+                    Settings
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+
+            © 2026 Nature Explorer. All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
 </body>
 </html>
